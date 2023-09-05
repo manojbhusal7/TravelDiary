@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    tools:context=".Auth.EmailVerificationActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="363dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvintro1"
+        android:layout_width="363dp"
+        android:layout_height="56dp"
+        android:fontFamily="@font/lexend"
+        android:text="Email Verification!"
+        android:textAlignment="center"
+        android:textColor="#FF464646"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <TextView
+        android:id="@+id/tvintro2"
+        android:layout_width="299dp"
+        android:layout_height="53dp"
+        android:fontFamily="@font/lexend"
+        android:text="Please Check your email for the OTP to verify."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvintro1" />
+    <EditText
+        android:id="@+id/etOTP"
+        android:layout_width="306dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:alpha=".60"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/cambo"
+        android:hint="Enter OTP here"
+        android:paddingLeft="20dp"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvintro2" />
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="306dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/color_primary"
+        android:fontFamily="@font/lexend"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etOTP" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

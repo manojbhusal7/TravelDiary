@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="rounded_splashscreen">
+    <item name="cornerFamily" >rounded</item>
+    <item name="cornerSizeBottomLeft">65dp</item>
+        <item name="cornerSizeBottomRight">65dp</item>
+    <item name="color">@color/color_primary</item>
+    </style>
+</resources>

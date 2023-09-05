@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/cambo</item>
+        <item>@font/lexend</item>
+        <item>@font/lexend_deca</item>
+        <item>@font/lexend_thin</item>
+        <item>@font/montserrat_semibold</item>
+    </array>
+</resources>
