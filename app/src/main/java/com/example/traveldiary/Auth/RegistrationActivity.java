@@ -65,9 +65,10 @@ public class RegistrationActivity extends AppCompatActivity {
                     public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                         if (response.code() == 200) {
 
-                            Toast.makeText(RegistrationActivity.this, "Registration Successfull", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegistrationActivity.this, "OTP has been sent to your email. Please verify.", Toast.LENGTH_SHORT).show();
                             RegisterResponse userRegister = response.body();
                             String tokenRegister = userRegister.getAccessToken();
+
 
                             //save token
                             SharedPreferences shp = getSharedPreferences("USERREGISTER", MODE_PRIVATE);
@@ -76,7 +77,8 @@ public class RegistrationActivity extends AppCompatActivity {
                             if (check == true) {
                                 Intent i = new Intent(RegistrationActivity.this, EmailVerificationActivity.class);
                                 startActivity(i);
-                                finish();
+                                i.putExtra("user_email",email );
+                                i.putExtra("source_activity", "signup");
                             }
                         } else if (response.code() == 422) {
                             Toast.makeText(RegistrationActivity.this, "Error", Toast.LENGTH_SHORT).show();

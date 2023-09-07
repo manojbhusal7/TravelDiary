@@ -8,7 +8,7 @@
     android:background="@drawable/top_background">
 
 
-        />
+
 
     <ImageView
         android:layout_width="150dp"
@@ -18,16 +18,25 @@ app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="8dp"
         android:src="@drawable/profilepic"
         android:id="@+id/ivProfile"
+        app:layout_constraintStart_toStartOf="parent"/>
+
 
 
         />
+<androidx.constraintlayout.widget.Barrier
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/baseline_camera_alt_24"
+    app:layout_constraintTop_toTopOf="@id/tvName"
+    app:layout_constraintStart_toStartOf="@id/ivProfile">
 
+</androidx.constraintlayout.widget.Barrier>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:text="Manoj Bhusal"
         android:textColor="@color/white"
         android:textSize="30dp"
@@ -35,10 +44,15 @@ app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/tvName"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/tvName"
-        android:text=""/>
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        android:text="Front-End Developer|Sport Lover|Dancing"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        android:textColor="@color/white"
+        android:id="@+id/etInterest"/>
+
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

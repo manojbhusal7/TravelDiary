@@ -38,8 +38,8 @@ public class SuggestionListAdapter  extends RecyclerView.Adapter<SuggestionListA
 
     @Override
     public void onBindViewHolder(@NonNull SuggestionListViewHolder holder, int position) {
-        holder.tvName.setText("Shambhu");
-        holder.tvAddress.setText(("Danda,"));
+        holder.tvName.setText("Shambhu Chaudhary");
+        holder.tvAddress.setText(("Danda,Nawalpur"));
     }
 
     @Override
