@@ -1,4 +1,4 @@
-package com.example.traveldiary;
+package com.example.traveldiary.View.Pages;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +10,8 @@ import android.widget.SearchView;
 import com.example.traveldiary.Adapter.SuggestionListAdapter;
 import com.example.traveldiary.Model.FollowModel;
 import com.example.traveldiary.Model.SearchModel;
+import com.example.traveldiary.R;
+import com.example.traveldiary.Adapter.RecyclerSearchAdapter;
 
 import java.util.ArrayList;
 
@@ -34,7 +36,11 @@ ArrayList<SearchModel> arrSearch = new ArrayList<>();
 
         arrSearch.add( new SearchModel(R.drawable.soyambhunath, "Soyambhunath, KTM") );
         arrSearch.add( new SearchModel(R.drawable.pokhara, "Pokhara, Kaski") );
-        arrSearch.add( new SearchModel(R.drawable.pasupatinath, "Soyambhunath \n KTM") );
+        arrSearch.add( new SearchModel(R.drawable.lumbini, "Lumbini, Kapilbastu") );
+
+        arrSearch.add( new SearchModel(R.drawable.pasupatinath, "Soyambhunath, KTM") );
+        arrSearch.add( new SearchModel(R.drawable.sauraha, "Sauraha, Chitwan") );
+
         RecyclerSearchAdapter adapter = new RecyclerSearchAdapter(this,arrSearch);
         rvSearch.setAdapter(adapter);
 

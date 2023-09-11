@@ -1,4 +1,4 @@
-package com.example.traveldiary.Model;
+package com.example.traveldiary.remote;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

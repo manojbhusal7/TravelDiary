@@ -4,33 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".PopularFragment"
+    tools:context=".View.Utilities.PopularFragment"
  >
 <ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:visibility="visible">
 
 
 <!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:id="@+id/recyclePopular"
         app:cardCornerRadius="10dp"
         app:cardUseCompatPadding="true"
         >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/lnPopular"
-            android:padding="40sp"
-            android:gravity="center_horizontal">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:src="@drawable/first"/>
-        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rvDiaryPost"/>
+
+
+
+
+
 
 
 

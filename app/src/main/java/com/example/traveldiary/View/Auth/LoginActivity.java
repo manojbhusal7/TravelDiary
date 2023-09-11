@@ -1,4 +1,4 @@
-package com.example.traveldiary.Auth;
+package com.example.traveldiary.View.Auth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,10 +11,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.traveldiary.HomeActivity;
-import com.example.traveldiary.Model.LoginResponse;
+import com.example.traveldiary.remote.LoginResponse;
 import com.example.traveldiary.R;
-import com.example.traveldiary.SearchActivity;
+import com.example.traveldiary.View.Pages.SearchActivity;
 import com.example.traveldiary.remote.APIUtil;
 import com.example.traveldiary.remote.RegisterService;
 
@@ -46,7 +45,7 @@ Button btnlogin;
 
 
         Button btnLogin = findViewById(R.id.btnlogin);
-        EditText etEmail = findViewById(R.id.etUser);
+        EditText etEmail = findViewById(R.id.etEmail);
         EditText etPassword = findViewById(R.id.etPass);
 
         TextView tvRegisternow =findViewById(R.id.tvRegisternow);

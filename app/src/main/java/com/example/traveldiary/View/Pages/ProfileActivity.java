@@ -1,8 +1,10 @@
-package com.example.traveldiary;
+package com.example.traveldiary.View.Pages;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.traveldiary.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

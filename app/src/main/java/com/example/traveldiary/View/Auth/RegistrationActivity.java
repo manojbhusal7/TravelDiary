@@ -1,4 +1,4 @@
-package com.example.traveldiary.Auth;
+package com.example.traveldiary.View.Auth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,10 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.traveldiary.Model.RegisterResponse;
-import com.example.traveldiary.Model.RegistrationModel;
+import com.example.traveldiary.remote.RegisterResponse;
 import com.example.traveldiary.R;
-import com.example.traveldiary.SearchActivity;
 import com.example.traveldiary.remote.APIUtil;
 import com.example.traveldiary.remote.RegisterService;
 
@@ -53,11 +51,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString();
 
                 String password = etPass.getText().toString();
-//                String cpassword = etCpass.getText().toString();
+                String cpassword = etCpass.getText().toString();
 
                 boolean check = validateinfo(fullname, email, password);
                 RegisterService registerService = APIUtil.getUserservices();
-                Call<RegisterResponse> userRegisterCall = registerService.registerUser(etName.getText().toString(), etEmail.getText().toString(), etPass.getText().toString(), etCpass.getText().toString());
+                Call<RegisterResponse> userRegisterCall = registerService.registerUser(fullname, email, password, cpassword);
                 userRegisterCall.enqueue(new Callback<RegisterResponse>() {
 
 
@@ -76,9 +74,10 @@ public class RegistrationActivity extends AppCompatActivity {
                             shp.edit().putBoolean("USERREGISTER", true).apply();
                             if (check == true) {
                                 Intent i = new Intent(RegistrationActivity.this, EmailVerificationActivity.class);
-                                startActivity(i);
                                 i.putExtra("user_email",email );
-                                i.putExtra("source_activity", "signup");
+                                i.putExtra("source_activity", "register");
+                                startActivity(i);
+
                             }
                         } else if (response.code() == 422) {
                             Toast.makeText(RegistrationActivity.this, "Error", Toast.LENGTH_SHORT).show();
@@ -95,6 +94,9 @@ public class RegistrationActivity extends AppCompatActivity {
                 });
             }
             private boolean validateinfo(String fullname,  String email, String password) {
+//                String password = etPass.getText().toString();
+                String cpassword = etCpass.getText().toString();
+
                 if (fullname.length() == 0) {
                     etName.requestFocus();
                     etName.setError("Field cannot be empty");
@@ -118,10 +120,10 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 }
 
-//else if (!password.equals(etCpass)) {
-//                    Toast.makeText(RegistrationActivity.this, "Password doesn't match", Toast.LENGTH_SHORT).show();
-//                    return false;
-//                }
+                else if (!password.equals(cpassword)) {
+                    Toast.makeText(RegistrationActivity.this, "Password doesn't match", Toast.LENGTH_SHORT).show();
+                    return false;
+                }
 
 
                  else {

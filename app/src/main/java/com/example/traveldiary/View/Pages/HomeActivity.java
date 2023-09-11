@@ -1,13 +1,13 @@
-package com.example.traveldiary;
+package com.example.traveldiary.View.Pages;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.widget.LinearLayout;
 
+import com.example.traveldiary.Adapter.ViewPagerHomeAdapter;
+import com.example.traveldiary.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class HomeActivity extends AppCompatActivity {

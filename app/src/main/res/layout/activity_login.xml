@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="@drawable/home_background"
-    tools:context=".Auth.LoginActivity"
+    android:background="@drawable/home_background"
+    tools:context=".View.Auth.LoginActivity"
     android:orientation="vertical"
     android:visibility="visible">
 
@@ -53,14 +53,14 @@ android:background="@drawable/home_background"
         app:layout_constraintTop_toBottomOf="@+id/tvintro1" />
 
     <EditText
-        android:id="@+id/etUser"
+        android:id="@+id/etEmail"
         android:layout_width="306dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:alpha=".60"
         android:background="@drawable/rounded_corner"
         android:fontFamily="@font/cambo"
-        android:hint="Enter Username"
+        android:hint="Enter Email"
         android:paddingLeft="20dp"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@ android:background="@drawable/home_background"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUser" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
 
     <Button

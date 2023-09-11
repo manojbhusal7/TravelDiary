@@ -1,4 +1,4 @@
-package com.example.traveldiary.Auth;
+package com.example.traveldiary.View.Auth;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;

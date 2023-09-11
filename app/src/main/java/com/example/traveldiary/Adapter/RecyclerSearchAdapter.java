@@ -1,7 +1,6 @@
-package com.example.traveldiary;
+package com.example.traveldiary.Adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traveldiary.Model.SearchModel;
+import com.example.traveldiary.R;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.zip.Inflater;
 
 public class RecyclerSearchAdapter extends RecyclerView.Adapter<RecyclerSearchAdapter.viewHolder> {
     Context context;

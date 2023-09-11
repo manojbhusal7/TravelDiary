@@ -1,4 +1,4 @@
-package com.example.traveldiary;
+package com.example.traveldiary.View.Utilities;
 
 public class PopularModel {
     int image, like;

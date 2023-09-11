@@ -7,6 +7,8 @@
     <color name="gray">#0000007A</color>
     <color name="gradiant">#3696EF
     </color>
+    <color name="midblue">#E4FAFF</color>
+    <color name="blue">@color/color_primary</color>
 
 
 </resources>

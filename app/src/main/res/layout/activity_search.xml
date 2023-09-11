@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchActivity"
+    tools:context=".View.Pages.SearchActivity"
     android:background="@drawable/home_background">
 
     <SearchView
@@ -126,16 +126,7 @@ android:id="@+id/linear1"
         app:layout_constraintTop_toBottomOf="@id/Suggestion"
         tools:layout_editor_absoluteX="9dp" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        android:id="@+id/bottomNavigate"
 
-
-
-        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

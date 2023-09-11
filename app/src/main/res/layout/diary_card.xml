@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:id="@+id/cvDiaryPost"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sauraha"
+            android:id="@+id/layout1"
+            >
+        <ImageView  android:id="@+id/ivImg"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/profilepic"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:text="Manoj Bhusal"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/ivImg"
+                app:layout_constraintTop_toTopOf="@id/ivImg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chitwan National Park"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/ivImg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <!-- Like Button -->
+            <ImageButton
+                android:id="@+id/likeButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/like"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/commentButton"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+            <!-- Comment Button -->
+            <ImageButton
+                android:id="@+id/commentButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/comment"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toEndOf="@+id/likeButton"
+                app:layout_constraintEnd_toStartOf="@+id/shareButton"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+            <!-- Share Button -->
+            <ImageButton
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/commentButton"
+                app:layout_constraintTop_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,14 @@
-package com.example.traveldiary;
+package com.example.traveldiary.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.example.traveldiary.View.Utilities.FollowingFragment;
+import com.example.traveldiary.View.Utilities.MostViewedFragment;
+import com.example.traveldiary.View.Utilities.PopularFragment;
 
 public class ViewPagerHomeAdapter extends FragmentPagerAdapter {
     public ViewPagerHomeAdapter(@NonNull FragmentManager fm) {

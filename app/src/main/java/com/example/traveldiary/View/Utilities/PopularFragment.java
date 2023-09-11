@@ -1,4 +1,4 @@
-package com.example.traveldiary;
+package com.example.traveldiary.View.Utilities;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.traveldiary.R;
 
 
 public class PopularFragment extends Fragment {

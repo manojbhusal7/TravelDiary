@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Auth.SplashActivity"
+    tools:context=".View.Auth.SplashActivity"
     android:layout_gravity="center"
     android:background="@drawable/home_background">
 

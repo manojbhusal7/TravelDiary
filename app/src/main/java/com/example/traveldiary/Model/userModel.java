@@ -1,4 +1,4 @@
-package com.example.traveldiary;
+package com.example.traveldiary.Model;
 
 public class userModel {
     int albumId;
