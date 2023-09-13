@@ -24,7 +24,7 @@ public class SuggestionListAdapter  extends RecyclerView.Adapter<SuggestionListA
     ArrayList<FollowModel> arrFollow;
     public SuggestionListAdapter(Context mContext, ArrayList<FollowModel> arrFollow){
         context = mContext;
-
+        this.arrFollow=arrFollow;
     }
 
     @NonNull

@@ -48,7 +48,6 @@ ArrayList<SearchModel> arrSearch = new ArrayList<>();
         ArrayList<FollowModel> arrFollow = new ArrayList<>();
         rvFollorList = findViewById(R.id.rvFollowList);
         arrFollow.add( new FollowModel(R.drawable.soyambhunath,"Manoj","Bharatpur" ) );
-        arrFollow.add( new FollowModel(R.drawable.soyambhunath,"snjb","Bharatpur" ) );
         SuggestionListAdapter suggestionListAdapter = new SuggestionListAdapter(this,arrFollow);
         rvFollorList.setAdapter(suggestionListAdapter);
         rvFollorList.setLayoutManager(new LinearLayoutManager(this));

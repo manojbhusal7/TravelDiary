@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,12 +7,9 @@
     android:visibility="visible"
     android:background="@drawable/home_background"
     tools:context=".View.Auth.RegistrationActivity">
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
         <ImageView
             android:id="@+id/logo"
             android:layout_width="363dp"
@@ -24,7 +19,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/tvintro1"
             android:layout_width="363dp"
@@ -114,8 +108,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etPass" />
-
-
         <Button
             android:id="@+id/btRegister"
             android:layout_width="306dp"
@@ -132,7 +124,6 @@
             app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etCpass" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -142,7 +133,6 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@id/btRegister"
             app:layout_constraintTop_toBottomOf="@id/btRegister" />
-
         <TextView
             android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
@@ -153,6 +143,5 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@id/btRegister"
             app:layout_constraintTop_toBottomOf="@id/btRegister" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

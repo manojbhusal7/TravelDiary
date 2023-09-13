@@ -35,7 +35,8 @@
         </activity>
         <activity
             android:name=".View.Pages.ProfileActivity"
-            android:exported="false" />
+            android:exported="true" >
+       </activity>
         <activity
             android:name=".View.Auth.ResetPassActivity"
             android:exported="false" />
@@ -51,18 +52,22 @@
         <activity
             android:name=".View.Pages.HomeActivity"
             android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+       </activity>
         <activity
             android:name=".View.Auth.RegistrationActivity"
             android:exported="false" />
         <activity
             android:name=".View.Auth.LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" />

@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".View.Pages.ProfileActivity"
-    android:background="@drawable/top_background"
+    android:background="@drawable/gradient"
     android:id="@+id/cl1">
 
 
 <com.google.android.material.imageview.ShapeableImageView
-    android:layout_width="180dp"
-    android:layout_height="180dp"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
            android:id="@+id/ivProfile"
     android:background="@color/Brown"
     app:layout_constraintTop_toTopOf="parent"
@@ -69,6 +69,7 @@
         android:text="0"
         app:layout_constraintTop_toBottomOf="@id/trip"
         android:textSize="30dp"
+        android:id="@+id/countTrip"
         android:textColor="@color/white"
         android:layout_marginStart="10dp"
         app:layout_constraintStart_toStartOf="@id/trip"/>
@@ -116,49 +117,45 @@
         android:textColor="@color/white"
         android:layout_marginStart="15dp"
         app:layout_constraintStart_toStartOf="@id/following"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/countTrip"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diaries"
+            android:layout_marginStart="20dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/lexend"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Diary"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawableStart="@drawable/newdiary"
+            android:background="@drawable/rounded_corner_button1"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--<androidx.constraintlayout.widget.ConstraintLayout-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="wrap_content"-->
-<!--    app:layout_constraintTop_toBottomOf="@id/cl1"-->
-<!--    app:layout_constraintStart_toStartOf="parent"-->
-<!--    android:id="@+id/cl2">-->
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Diary"-->
-<!--        android:textSize="25dp"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/cl2"-->
-<!--        app:layout_constraintStart_toStartOf="@id/cl2"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:id="@+id/diary"/>-->
-<!--    <Button-->
-<!--        android:id="@+id/btHill"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:background="@drawable/rounded_corner"-->
-<!--        android:shadowColor="@color/black"-->
-<!--        android:text="New Diary"-->
-<!--        android:textAllCaps="false"-->
-<!--        android:padding="5dp"-->
-<!--        android:layout_marginEnd="20dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@id/diary"-->
-<!--        android:drawableStart="@drawable/newdiary"/>-->
-
-
-
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/cl2"-->
-<!--        app:layout_constraintStart_toStartOf="@id/cl2"-->
-<!--        />-->
-
-
-
 
 

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.traveldiary.R;
@@ -27,6 +28,7 @@ public class EmailVerificationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_email_verification);
         Button btnSubmit = findViewById(R.id.btSubmit);
         EditText etOTP = findViewById(R.id.etOTP);
+        TextView btnResend = findViewById(R.id.tvResendOtp);
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +77,34 @@ public class EmailVerificationActivity extends AppCompatActivity {
                         }
                     });
 
+            }
+        });
+
+        btnResend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RegisterService registerService = APIUtil.getUserservices();
+                Bundle extras = getIntent().getExtras();
+                String email = extras.getString("user_email");
+
+                Call<ApiResponse> ApiResponseCall = registerService.resend(email);
+                ApiResponseCall.enqueue(new Callback<ApiResponse>() {
+                    @Override
+                    public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
+                        if (response.code() == 200) {
+                            Toast.makeText(EmailVerificationActivity.this, "Otp has been sent Again.", Toast.LENGTH_SHORT).show();
+                        } else if (response.code()==401){
+                            Toast.makeText(EmailVerificationActivity.this, "Error!! Please try after about 5 minutes.", Toast.LENGTH_SHORT).show();
+                        }else {
+                            Toast.makeText(EmailVerificationActivity.this, "Error on Server!!", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ApiResponse> call, Throwable t) {
+                        Toast.makeText(EmailVerificationActivity.this, "Failed to resend!!", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
     }

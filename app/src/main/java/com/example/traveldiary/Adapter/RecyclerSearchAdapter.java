@@ -20,7 +20,7 @@ public class RecyclerSearchAdapter extends RecyclerView.Adapter<RecyclerSearchAd
     ArrayList<SearchModel> arrSearch;
 
 
-RecyclerSearchAdapter(Context context, ArrayList<SearchModel> arrSearch){
+public RecyclerSearchAdapter(Context context, ArrayList<SearchModel> arrSearch){
     this.context=context;
 this.arrSearch=arrSearch;
 }

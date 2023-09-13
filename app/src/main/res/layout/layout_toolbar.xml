@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="13dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_centerVertical="true"
+            android:id="@+id/arrow">
+
+        </ImageView>
+
+
+        <TextView
+            android:id="@+id/Bsave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="Save"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Diary"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:layout_marginStart="24dp"
+            android:id="@+id/txt"
+            android:layout_toEndOf="@+id/arrow"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

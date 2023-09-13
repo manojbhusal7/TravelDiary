@@ -14,6 +14,9 @@ public interface RegisterService {
     Call<ApiResponse> verifyOtp(@Query("email") String email, @Query("otp") String otp);
 
 
+    @POST("resend")
+    Call<ApiResponse> resend(@Query("email") String email);
+
     @POST("forgot")
     Call<ApiResponse> forgot(@Query("email") String email);
 
