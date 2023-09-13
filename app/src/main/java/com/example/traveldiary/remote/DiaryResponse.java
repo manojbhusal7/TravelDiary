@@ -1,21 +1,19 @@
 package com.example.traveldiary.remote;
 
-import android.provider.ContactsContract;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class DiaryCreatedResponse {
+import java.util.List;
+
+public class DiaryResponse {
+
 
     @SerializedName("status")
     @Expose
     private Boolean status;
-    @SerializedName("message")
-    @Expose
-    private String message;
     @SerializedName("data")
     @Expose
-    private Diary data;
+    private List<Diary> data;
 
     public Boolean getStatus() {
         return status;
@@ -25,19 +23,18 @@ public class DiaryCreatedResponse {
         this.status = status;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public Diary getData() {
+    public List<Diary> getData() {
         return data;
     }
 
-    public void setData(Diary data) {
+
+    public DiaryResponse(List<Diary> data) {
+        super();
+        this.data = data;
+    }
+
+
+    public void setData(List<Diary> data) {
         this.data = data;
     }
 

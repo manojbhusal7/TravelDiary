@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.traveldiary.View.Pages.HomeActivity;
 import com.example.traveldiary.remote.LoginResponse;
 import com.example.traveldiary.R;
 import com.example.traveldiary.View.Pages.SearchActivity;
@@ -84,7 +85,7 @@ Button btnlogin;
                                                         // app
                                                         shp.edit().putBoolean("LOGIN",true).apply();
 
-                                                        Intent i = new Intent(LoginActivity.this,SearchActivity.class);
+                                                        Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                                                         startActivity(i);
                                                         finish();
 

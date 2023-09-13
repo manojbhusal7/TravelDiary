@@ -1,6 +1,7 @@
 package com.example.traveldiary.remote;
 
 import retrofit2.Call;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -28,4 +29,6 @@ public interface RegisterService {
     @POST("resendOtp")
     Call<ApiResponse> resendOtp(@Query("email") String email);
 
+    @GET("diaries")
+    Call<DiaryResponse> diaries( @Header("Authorization") String token);
 }

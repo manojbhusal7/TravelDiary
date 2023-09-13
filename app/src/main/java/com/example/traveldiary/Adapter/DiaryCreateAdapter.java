@@ -7,22 +7,21 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.traveldiary.R;
-import com.example.traveldiary.remote.DiaryList;
+import com.example.traveldiary.remote.Diary;
 
 import java.util.List;
 
 public class DiaryCreateAdapter extends RecyclerView.Adapter<DiaryCreateAdapter.ViewHolder> {
 
-    List<DiaryList> diaryList;
+    List<Diary> diaryList;
     Context context;
 
-    public DiaryCreateAdapter(Context context, List<DiaryList> diaryList) {
+    public DiaryCreateAdapter(Context context, List<Diary> diaryList) {
         this.context = context;
         this.diaryList = diaryList;
 
